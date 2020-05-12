@@ -5,6 +5,7 @@ import Config from '../Config/DebugConfig'
 import createSagaMiddleware from 'redux-saga'
 import ScreenTracking from './ScreenTrackingMiddleware'
 import { createReactNavigationReduxMiddleware } from 'react-navigation-redux-helpers'
+import { persistStore } from "redux-persist";
 
 // creates the store
 export default (rootReducer, rootSaga) => {
@@ -45,7 +46,10 @@ export default (rootReducer, rootSaga) => {
   // kick off root saga
   let sagasManager = sagaMiddleware.run(rootSaga)
 
+  const persistor = persistStore(store);
+
   return {
+    persistor,
     store,
     sagasManager,
     sagaMiddleware

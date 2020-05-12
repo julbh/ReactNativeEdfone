@@ -2,21 +2,23 @@
 
 buildscript {
     ext {
-        buildToolsVersion = "27.0.3"
+        buildToolsVersion = "28.0.3"
         minSdkVersion = 16
-        compileSdkVersion = 27
-        targetSdkVersion = 26
+        compileSdkVersion = 28
+        targetSdkVersion = 28
         supportLibVersion = "27.1.1"
     }
     repositories {
         google()
         jcenter()
+        maven {
+           url 'https://maven.fabric.io/public'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.google.gms:google-services:4.2.0'
+        classpath 'io.fabric.tools:gradle:1.29.0'  // Crashlytics plugin
     }
 }
 
@@ -29,11 +31,29 @@ allprojects {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
         }
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
     }
 }
 
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.4'
-    distributionUrl = distributionUrl.replace("bin", "all")
+subprojects {
+    afterEvaluate {project ->
+    // force libs to use recent buildtools
+        if (project.hasProperty("android")) {
+            android {
+                compileSdkVersion = 28  
+                buildToolsVersion = "28.0.3" 
+            }
+        }
+    }
 }
+
+// For react-native-fast-image androidx migration
+project.ext {
+    excludeAppGlideModule = true
+}
+
+//task wrapper(type: Wrapper) {
+//    gradleVersion = '4.4'
+//    distributionUrl = distributionUrl.replace("bin", "all")
+//}

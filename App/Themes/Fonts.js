@@ -1,6 +1,8 @@
+import {Platform} from 'react-native';
 const type = {
-  base: 'Avenir-Book',
-  bold: 'Avenir-Black',
+  base: Platform.OS==='ios'? 'AdelleSans-Book' : 'Adelle-Sans-Book',
+  bold: Platform.OS==='ios'? 'AdelleSans-Bold' : 'Adelle-Sans-Bold',
+  semibold: Platform.OS==='ios'?'AdelleSans-Book' : 'Adelle-Sans-Semibold',
   emphasis: 'HelveticaNeue-Italic'
 }
 

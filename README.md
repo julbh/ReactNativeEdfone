@@ -1,4 +1,4 @@
-#  EdfoneApp
+#  edfone
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 * Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
@@ -65,3 +65,17 @@ The `.env` file is ignored by git keeping those secrets out of your repo.
 2. Add your config variables
 3. Follow instructions at [https://github.com/luggit/react-native-config#setup](https://github.com/luggit/react-native-config#setup)
 4. Done!
+
+<!-- "$PODS_CONFIGURATION_BUILD_DIR/Firebase" -->
+
+
+
+Androidx migration issues.
+Replace guide: 
+https://developer.android.com/jetpack/androidx/migrate#migrate
+
+Bundle command
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+Full command
+cd android && gradlew clean && cd .. && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android && gradlew assembleRelease && gradlew bundleRelease && cd ..

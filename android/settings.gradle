@@ -1,7 +1,59 @@
-rootProject.name = 'EdfoneApp'
+rootProject.name = 'edfone'
+include ':react-native-photo-view'
+project(':react-native-photo-view').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-photo-view/android')
+include ':react-native-version-number'
+project(':react-native-version-number').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-version-number/android')
+include ':react-native-youtube'
+project(':react-native-youtube').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-youtube/android')
+include ':rn-fetch-blob'
+project(':rn-fetch-blob').projectDir = new File(rootProject.projectDir, '../node_modules/rn-fetch-blob/android')
+include ':react-native-image-base64'
+project(':react-native-image-base64').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-base64/android')
+include ':react-native-image-resizer'
+project(':react-native-image-resizer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-resizer/android')
+include ':react-native-keep-awake'
+project(':react-native-keep-awake').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-keep-awake/android')
+include ':react-native-fast-image'
+project(':react-native-fast-image').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fast-image/android')
+include ':react-native-contacts'
+project(':react-native-contacts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-contacts/android')
+include ':react-native-image-cropper-thanhtq'
+project(':react-native-image-cropper-thanhtq').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-cropper-thanhtq/android')
+include ':react-native-android-open-settings'
+project(':react-native-android-open-settings').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-open-settings/android')
+include ':react-native-firebase'
+project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
+include ':react-native-camera'
+project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
+include ':react-native-background-timer'
+project(':react-native-background-timer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-background-timer/android')
+include ':react-native-svg'
+project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
+include ':react-native-audio'
+project(':react-native-audio').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-audio/android')
+include ':react-native-camera'
+project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
+include ':@react-native-community_slider'
+project(':@react-native-community_slider').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/slider/android')
+include ':react-native-image-crop-picker'
+project(':react-native-image-crop-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-crop-picker/android')
+include ':react-native-fs'
+project(':react-native-fs').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fs/android')
+include ':react-native-image-picker'
+project(':react-native-image-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-picker/android')
+include ':react-native-splash-screen'
+project(':react-native-splash-screen').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-splash-screen/android')
+include ':react-native-device-info'
+project(':react-native-device-info').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-device-info/android')
+include ':react-native-config'
+project(':react-native-config').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-config/android')
 include ':react-native-i18n'
 project(':react-native-i18n').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-i18n/android')
 include ':react-native-gesture-handler'
 project(':react-native-gesture-handler').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-gesture-handler/android')
+include ':react-native-audio-toolkit'
+project(':react-native-audio-toolkit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-audio-toolkit/android/lib')
+include ':react-native-background-timer'
+project(':react-native-background-timer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-background-timer/android')
 
 include ':app'

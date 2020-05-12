@@ -74,6 +74,14 @@ const ApplicationStyles = {
     borderColor: Colors.ember,
     alignItems: 'center',
     textAlign: 'center'
+  },
+  input: {
+    borderBottomColor: '#27282f',
+    borderBottomWidth: 1,
+    color: '#27282f',
+    fontSize: 16,
+    fontFamily: Fonts.type.semibold,
+    paddingHorizontal: 0
   }
 }
 

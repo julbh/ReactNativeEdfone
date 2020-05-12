@@ -7,8 +7,20 @@ import ReduxPersist from '../Config/ReduxPersist'
 /* ------------- Assemble The Reducers ------------- */
 export const reducers = combineReducers({
   nav: require('./NavigationRedux').reducer,
-  github: require('./GithubRedux').reducer,
-  search: require('./SearchRedux').reducer
+  sideMenu: require('./SideMenuRedux').reducer,
+  otpVerification: require('./OtpVerificationRedux').reducer,
+  notes: require('./NotesRedux').reducer,
+  noteDetail: require('./NoteFullScreenRedux').reducer,
+  timer: require('./TimerRedux').reducer,
+  timerNotes: require('./TimerWithNotesListRedux').reducer,
+  noteCreate: require('./NoteCreateRedux').reducer,
+  saveNote: require('./SaveNoteRedux').reducer,
+  tasks: require('./TasksRedux').reducer,
+  invite: require('./InviteRedux').reducer,
+  store: require('./StoreRedux').reducer,
+  deepLink: require('./DeepLinkRedux').reducer,
+  terms: require('./TermsRedux').reducer,
+  assessment: require('./AssessmentRedux').reducer,
 })
 
 export default () => {
@@ -19,7 +31,10 @@ export default () => {
     finalReducers = persistReducer(persistConfig, reducers)
   }
 
-  let { store, sagasManager, sagaMiddleware } = configureStore(finalReducers, rootSaga)
+  let { store, persistor, sagasManager, sagaMiddleware } = configureStore(
+    finalReducers,
+    rootSaga
+  )
 
   if (module.hot) {
     module.hot.accept(() => {
@@ -34,5 +49,5 @@ export default () => {
     })
   }
 
-  return store
+  return { store, persistor }
 }

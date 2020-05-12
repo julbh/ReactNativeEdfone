@@ -1,5 +1,5 @@
 const colors = {
-  background: '#1F0808',
+  background: '#e2e2e2',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',
@@ -21,7 +21,31 @@ const colors = {
   eggplant: '#251a34',
   border: '#483F53',
   banner: '#5F3E63',
-  text: '#E0D7E5'
+  text: '#E0D7E5',
+  themeColor: '#5354F4',
+  subjectColors: [
+    // '#F0F4C3',
+    // '#F8BBD0',
+    // '#FFAB91',
+    // '#D7CCC8',
+    // '#FFE0B2',
+    // '#DCEDC8',
+    // '#039BE5',
+    // '#B39DDB',
+    // '#90CAF9',
+    // '#B2EBF2',
+
+    '#CCFF90',
+    '#B9F6CA',
+    '#A7FFEB',
+    '#84FFFF',
+    '#8C9EFF',
+    '#B388FF',
+    '#90CAF9',
+    '#B2EBF2',
+    '#DCEDC8',
+    '#8C9EFF',
+  ]
 }
 
 export default colors

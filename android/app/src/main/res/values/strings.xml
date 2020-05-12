@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">EdfoneApp</string>
+    <string name="app_name">Edfone</string>
+    <string name="default_notification_channel_id">edfonechannel</string>
 </resources>
